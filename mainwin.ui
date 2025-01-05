@@ -1,0 +1,1249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWin</class>
+ <widget class="QMainWindow" name="MainWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1059</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>81</width>
+      <height>603</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: orange;</string>
+    </property>
+    <widget class="QPushButton" name="toAddContactBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>90</y>
+       <width>81</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/asserts/add-user.png);
+background-color: orange;
+border: none;
+padding:15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toAllContactBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>81</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/asserts/contact-list.png);
+background-color: rgb(255, 255, 255);
+border: none;
+padding:15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="toSettingBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>81</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/asserts/settings.png);
+background-color: orange;
+border: none;
+padding:15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>0</y>
+      <width>981</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page_5">
+     <widget class="QPushButton" name="DeleteContactBtn">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    color: white;
+    border: 2px solid red;
+	font: 700  12pt &quot;Segoe UI&quot;;
+    border-radius: 5px;
+    padding: 1px 20px;
+    background-color: red;
+}
+
+QPushButton:hover {
+    background-color: none;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: #E59400;
+    color: #FFD700;
+}
+</string>
+      </property>
+      <property name="text">
+       <string> Delete</string>
+      </property>
+      <property name="icon">
+       <iconset theme="QIcon::ThemeIcon::EditDelete"/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="toEditBtn">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>20</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    color: white;
+    border: 2px solid orange;
+	font: 700 italic 12pt &quot;Segoe UI&quot;;
+    border-radius: 5px;
+    padding: 1px 20px;
+    background-color: #FFA500;
+}
+
+QPushButton:hover {
+    background-color: none;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: #E59400;
+    color: #FFD700;
+}
+</string>
+      </property>
+      <property name="text">
+       <string> Edit</string>
+      </property>
+      <property name="icon">
+       <iconset theme="QIcon::ThemeIcon::MailMessageNew"/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="searchInput">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>20</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="toEditBtn_2">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>20</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    color: white;
+    border: 2px solid orange;
+	font: 700 italic 12pt &quot;Segoe UI&quot;;
+    border-radius: 5px;
+    padding: 1px 20px;
+    background-color: #FFA500;
+}
+
+QPushButton:hover {
+    background-color: none;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: #E59400;
+    color: #FFD700;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>  Search</string>
+      </property>
+      <property name="icon">
+       <iconset theme="QIcon::ThemeIcon::EditFind"/>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>91</y>
+        <width>951</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <property name="sizeIncrement">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTableWidget {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    gridline-color: #ccc;
+    font-size: 14px;
+    color: #333;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border: none;
+}
+
+QTableWidget::item:selected {
+    background-color: #ffb74d;
+    color: #fff;
+}
+
+QHeaderView::section {
+    background-color: #f57c00;
+    color: white;
+    padding: 6px;
+    font-size: 14px;
+    border: none;
+    border-right: 1px solid #ddd;
+}
+
+QTableCornerButton::section {
+    background-color: #f57c00;
+    border: none;
+}
+
+
+
+QScrollBar:horizontal {
+    border: none;
+    background: #f0f0f0;
+    height: 12px;
+    margin: 0px 20px 0px 20px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #ff9800;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #f0f0f0;
+    width: 12px;
+    margin: 20px 0px 20px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #ff9800;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::add-line:vertical {
+    background: none;
+    height: 20px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    background: none;
+    height: 20px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    background: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+</string>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+      </property>
+      <property name="textElideMode">
+       <enum>Qt::TextElideMode::ElideRight</enum>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollMode::ScrollPerItem</enum>
+      </property>
+      <property name="horizontalScrollMode">
+       <enum>QAbstractItemView::ScrollMode::ScrollPerPixel</enum>
+      </property>
+      <property name="showGrid">
+       <bool>false</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="cornerButtonEnabled">
+       <bool>false</bool>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>18</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>172</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Id</string>
+       </property>
+       <property name="font">
+        <font>
+         <bold>true</bold>
+        </font>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Number</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Email</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Adress</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Description</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>9</pointsize>
+         <stylestrategy>NoAntialias</stylestrategy>
+        </font>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>90129</string>
+       </property>
+      </item>
+      <item row="0" column="1">
+       <property name="text">
+        <string>Muhhammm sjsij sjsojj osjosjs</string>
+       </property>
+      </item>
+      <item row="0" column="2">
+       <property name="text">
+        <string>0123 456789010</string>
+       </property>
+      </item>
+      <item row="0" column="3">
+       <property name="text">
+        <string>rehan12938 hz @gmail.comx</string>
+       </property>
+      </item>
+      <item row="0" column="4">
+       <property name="text">
+        <string>green town karachi sharahe failsal town</string>
+       </property>
+      </item>
+      <item row="0" column="5">
+       <property name="text">
+        <string>kjsjso sojsojos sososkokso osoksok sokoks skokso oskksp spkpks </string>
+       </property>
+      </item>
+      <item row="1" column="0">
+       <property name="text">
+        <string>101</string>
+       </property>
+      </item>
+      <item row="1" column="1">
+       <property name="text">
+        <string>Rehan Amja</string>
+       </property>
+      </item>
+      <item row="1" column="2">
+       <property name="text">
+        <string>20301 3333333333</string>
+       </property>
+      </item>
+      <item row="1" column="3">
+       <property name="text">
+        <string>rehan1234@mail.com</string>
+       </property>
+      </item>
+      <item row="1" column="4">
+       <property name="text">
+        <string>uhuh hihih iij</string>
+       </property>
+      </item>
+      <item row="1" column="5">
+       <property name="text">
+        <string>this is the test case</string>
+       </property>
+      </item>
+      <item row="2" column="0">
+       <property name="text">
+        <string>102</string>
+       </property>
+      </item>
+      <item row="2" column="1">
+       <property name="text">
+        <string>Muhamma Rehan Amjad</string>
+       </property>
+      </item>
+      <item row="2" column="2">
+       <property name="text">
+        <string>+92 3273784620</string>
+       </property>
+      </item>
+      <item row="2" column="3">
+       <property name="text">
+        <string>rehanamjad1001@gmail.com</string>
+       </property>
+      </item>
+      <item row="2" column="4">
+       <property name="text">
+        <string>ihih okok rr5</string>
+       </property>
+      </item>
+      <item row="2" column="5">
+       <property name="text">
+        <string>this is the test case two</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QLabel" name="label_34">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>369</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(244, 142, 0);
+font: italic 36pt &quot;Brush Script MT&quot;;
+text-decoration: underline;
+
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Add Contact</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="addContactInputAddress">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>270</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="addContactInputPhone">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>180</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="addContactBtn">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>440</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    color: white;
+    
+	font: 700 12pt &quot;Segoe UI&quot;;
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 1px 20px;
+    background-color: #FFA500;
+}
+
+QPushButton:hover {
+    background-color: none;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: #E59400;
+    color: #FFD700;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Add Contact</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>240</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Address</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="addContactInputDescription">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>360</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_35">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>330</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Description</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_36">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>150</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Phone</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="addContactInputName">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>180</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_37">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>150</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="addContactInputEmail">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>270</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_38">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_7">
+     <widget class="QLineEdit" name="editContactInputPhone">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>180</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>240</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Address</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>330</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Description</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>240</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Email</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="editContactBtn">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>440</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    color: white;
+    
+	font: 700 12pt &quot;Segoe UI&quot;;
+    border: 2px solid orange;
+    border-radius: 5px;
+    padding: 1px 20px;
+    background-color: #FFA500;
+}
+
+QPushButton:hover {
+    background-color: none;
+    color: black;
+}
+
+QPushButton:pressed {
+    background-color: #E59400;
+    color: #FFD700;
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Edit Contact</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editContactInputName">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>180</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_31">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>150</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_32">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>150</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Phone</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editContactInputAddress">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>270</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editContactInputEmail">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>270</y>
+        <width>281</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editContactInputDescription">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>360</y>
+        <width>641</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+    background-color: #f5f5f5;
+    color: #333333;
+    border: 2px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff7f00;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+QLineEdit:hover {
+    border: 2px solid #ffa500;
+}
+
+QLineEdit:disabled {
+    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    color: #a0a0a0;
+}
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_33">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>369</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(244, 142, 0);
+font: italic 36pt &quot;Brush Script MT&quot;;
+text-decoration: underline;
+
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Edit Contact</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1059</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
