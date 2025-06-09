@@ -3,47 +3,34 @@
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
-#include <QtSql/QSqlDatabase>
 #include "ui_mainwindow.h"
+#include "mainwin.h"
+#include "auth.h"
+#include "contactmanager.h"
 
-void connectToDatabase()
-{
-    // Create a database connection
-    QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("localhost");
-    db.setPort(3306);
-    db.setDatabaseName("CMSDB"); // Replace with your database name
-    db.setUserName("root");      // Replace with your MySQL username
-    db.setPassword("mysql");     // Replace with your MySQL password
-
-    // Open the connection
-    if (!db.open()) {
-        qDebug() << "Database connection failed:" << db.lastError().text();
-    } else {
-        qDebug() << "Database connection successful!";
-    }
-}
-
-void checkDrivers()
-{
-    QStringList drivers = QSqlDatabase::drivers();
-    qDebug() << "Available drivers:" << drivers;
-}
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    checkDrivers();
-    connectToDatabase();
-    this->setWindowFlags(Qt::Window | Qt::WindowCloseButtonHint);
+    this->setWindowFlags(Qt::Window | Qt::WindowCloseButtonHint | Qt::WindowMinimizeButtonHint);
+    ui->signupErrorLabel->setAlignment(Qt::AlignCenter);
+    ui->loginErrorLabel->setAlignment(Qt::AlignCenter);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::openNextWindow(){
+    MainWin *mainWin = new MainWin();
+    mainWin->show();
+    this->close();
+}
+
+
 
 void MainWindow::on_toLoginBtn_clicked()
 {
@@ -67,7 +54,61 @@ void MainWindow::on_tologinBtnInSignupPage_clicked()
 
 void MainWindow::on_loginBtn_clicked()
 {
-    mainWinUi = new MainWin(this);
-    mainWinUi->show();
+    QString email = ui->loginEmailInput->text().trimmed();
+    QString password = ui->loginPasswordInput->text();
+
+    Auth auth;
+    QString loginRes = auth.login(email, password);
+
+    if (loginRes == "true") {
+        // ContactManager contactManager;
+        openNextWindow();
+    } else {
+        ui->loginErrorLabel->setText(loginRes);
+    }
+}
+
+void MainWindow::on_signupBtn_clicked()
+{
+    QString name = ui->signupNameInput->text().trimmed();
+    QString email = ui->signupEmailInput->text().trimmed();
+    QString password = ui->signupPasswordInput->text().trimmed();
+
+    Auth auth;
+    QString createdAccountRes = auth.createAccount(name, email, password);
+
+    if (createdAccountRes == "true") {
+        QString loginRes = auth.login(email, password);
+        if (loginRes == "true") {
+           openNextWindow();
+        } else {
+            ui->signupErrorLabel->setText("Failed to log in after account creation.");
+        }
+    } else {
+        ui->signupErrorLabel->setText(createdAccountRes);
+    }
+}
+
+
+void MainWindow::on_signupShowHidePasswordBtn_clicked()
+{
+    if(ui->signupShowHidePasswordBtn->text() == "Show Password"){
+        ui->signupPasswordInput->setEchoMode(QLineEdit::Normal);
+        ui->signupShowHidePasswordBtn->setText("Hide Password");
+    } else {
+        ui->signupPasswordInput->setEchoMode(QLineEdit::Password);
+        ui->signupShowHidePasswordBtn->setText("Show Password");
+    }
+}
+
+void MainWindow::on_loginShowHidePasswordBtn_clicked()
+{
+    if(ui->loginShowHidePasswordBtn->text() == "Show Password"){
+        ui->loginPasswordInput->setEchoMode(QLineEdit::Normal);
+        ui->loginShowHidePasswordBtn->setText("Hide Password");
+    } else {
+        ui->loginPasswordInput->setEchoMode(QLineEdit::Password);
+        ui->loginShowHidePasswordBtn->setText("Show Password");
+    }
 }
 

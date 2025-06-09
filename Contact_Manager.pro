@@ -1,4 +1,4 @@
-QT += core gui widgets sql
+QT += core gui widgets sql network
 # Mysql server paths:
 INCLUDEPATH += "C:\Program Files\MySQL\MySQL Server 8.0\include"
 LIBS += -L"C:\Program Files\MySQL\MySQL Server 8.0\lib" -lmysql
@@ -14,13 +14,17 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    auth.cpp \
     contactmanager.cpp \
+    databasemanager.cpp \
     main.cpp \
     mainwin.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    auth.h \
     contactmanager.h \
+    databasemanager.h \
     mainwin.h \
     mainwindow.h
 

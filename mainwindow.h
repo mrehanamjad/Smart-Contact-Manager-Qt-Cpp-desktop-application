@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "mainwin.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,6 +17,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
 private slots:
     void on_toLoginBtn_clicked();
 
@@ -29,8 +29,16 @@ private slots:
 
     void on_loginBtn_clicked();
 
+    void on_signupBtn_clicked();
+
+    void on_signupShowHidePasswordBtn_clicked();
+
+    void on_loginShowHidePasswordBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
-    MainWin *mainWinUi;
+
+
+    void openNextWindow();
 };
 #endif // MAINWINDOW_H

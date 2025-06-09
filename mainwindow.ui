@@ -188,8 +188,8 @@ QPushButton:pressed {
      <widget class="QLabel" name="label_5">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>50</y>
+        <x>180</x>
+        <y>30</y>
         <width>369</width>
         <height>41</height>
        </rect>
@@ -205,8 +205,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <widget class="QLabel" name="label_6">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>100</y>
+        <x>200</x>
+        <y>80</y>
         <width>181</width>
         <height>21</height>
        </rect>
@@ -222,8 +222,8 @@ color: rgb(52, 52, 52);</string>
      <widget class="QLineEdit" name="loginEmailInput">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>170</y>
+        <x>190</x>
+        <y>180</y>
         <width>281</width>
         <height>41</height>
        </rect>
@@ -260,8 +260,8 @@ QLineEdit:disabled {
      <widget class="QLineEdit" name="loginPasswordInput">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>250</y>
+        <x>190</x>
+        <y>260</y>
         <width>281</width>
         <height>41</height>
        </rect>
@@ -294,12 +294,15 @@ QLineEdit:disabled {
 }
 </string>
       </property>
+      <property name="echoMode">
+       <enum>QLineEdit::EchoMode::Password</enum>
+      </property>
      </widget>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>140</y>
+        <x>190</x>
+        <y>150</y>
         <width>81</width>
         <height>21</height>
        </rect>
@@ -314,8 +317,8 @@ QLineEdit:disabled {
      <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>220</y>
+        <x>190</x>
+        <y>230</y>
         <width>81</width>
         <height>21</height>
        </rect>
@@ -330,8 +333,8 @@ QLineEdit:disabled {
      <widget class="QPushButton" name="loginBtn">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>310</y>
+        <x>190</x>
+        <y>340</y>
         <width>281</width>
         <height>41</height>
        </rect>
@@ -368,8 +371,8 @@ QPushButton:pressed {
      <widget class="QPushButton" name="toSignupBtnInLoginPage">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>100</y>
+        <x>370</x>
+        <y>80</y>
         <width>80</width>
         <height>21</height>
        </rect>
@@ -386,8 +389,51 @@ border:none;</string>
        <string>Sign UP</string>
       </property>
      </widget>
+     <widget class="QLabel" name="loginErrorLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>110</y>
+        <width>571</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Segoe UI&quot;;
+color:red;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loginShowHidePasswordBtn">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>310</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 400 10pt &quot;Segoe UI&quot;;
+border:none;</string>
+      </property>
+      <property name="text">
+       <string>Show Password</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::InputMethodHint::ImhNone</set>
+     </property>
      <attribute name="title">
       <string>Page</string>
      </attribute>
@@ -449,7 +495,7 @@ border:none;</string>
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>340</y>
+        <y>360</y>
         <width>281</width>
         <height>41</height>
        </rect>
@@ -516,7 +562,7 @@ color: rgb(52, 52, 52);</string>
        <string>Password</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="loginPasswordInput_3">
+     <widget class="QLineEdit" name="signupPasswordInput">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -553,8 +599,14 @@ QLineEdit:disabled {
 }
 </string>
       </property>
+      <property name="inputMethodHints">
+       <set>Qt::InputMethodHint::ImhHiddenText|Qt::InputMethodHint::ImhNoAutoUppercase|Qt::InputMethodHint::ImhNoPredictiveText|Qt::InputMethodHint::ImhSensitiveData</set>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::EchoMode::Password</enum>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="loginEmailInput_3">
+     <widget class="QLineEdit" name="signupEmailInput">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -591,8 +643,11 @@ QLineEdit:disabled {
 }
 </string>
       </property>
+      <property name="inputMethodHints">
+       <set>Qt::InputMethodHint::ImhEmailCharactersOnly</set>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="loginEmailInput_4">
+     <widget class="QLineEdit" name="signupNameInput">
       <property name="geometry">
        <rect>
         <x>210</x>
@@ -644,6 +699,43 @@ QLineEdit:disabled {
       </property>
       <property name="text">
        <string>Name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="signupErrorLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>130</y>
+        <width>571</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Segoe UI&quot;;
+color:red;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="signupShowHidePasswordBtn">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>320</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 400 10pt &quot;Segoe UI&quot;;
+border:none;</string>
+      </property>
+      <property name="text">
+       <string>Show Password</string>
       </property>
      </widget>
     </widget>

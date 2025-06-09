@@ -6,5 +6,6 @@
         <file>asserts/contact-list.png</file>
         <file>asserts/plus.png</file>
         <file>asserts/settings.png</file>
+        <file>asserts/user.png</file>
     </qresource>
 </RCC>
