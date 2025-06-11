@@ -118,3 +118,23 @@ db.setUserName("your_mysql_user");
 db.setPassword("your_mysql_password");
 // ✅ Replace with your actual credentials as per your environment.
 ```
+
+
+## 📝 Usage
+- Run the Qt C++ application.
+- Sign up or log in to access the contact management features.
+- Add, view, edit, and delete contacts.
+- Send emails to contacts using the integrated email sending functionality.
+
+
+## Project ScreenShots
+![Screenshot](./project%20screenshorts/1.PNG)
+![Screenshot](./project%20screenshorts/2.PNG)
+![Screenshot](./project%20screenshorts/3.PNG)
+![Screenshot](./project%20screenshorts/4.PNG)
+![Screenshot](./project%20screenshorts/5.PNG)
+![Screenshot](./project%20screenshorts/6.PNG)
+![Screenshot](./project%20screenshorts/7.PNG)
+![Screenshot](./project%20screenshorts/8.PNG)
+![Screenshot](./project%20screenshorts/9.PNG)
+![Screenshot](./project%20screenshorts/10.PNG)
