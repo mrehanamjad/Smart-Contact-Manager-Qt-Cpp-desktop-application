@@ -51,10 +51,32 @@ Route: POST `/sendMail`
 
 ## Project SetUp:
 - clone the repo
-  ```bash
-  
+```bash
+https://github.com/mrehanamjad/Smart-Contact-Manager-Qt-Cpp-desktop-application.git
 
+cd Smart-Contact-Manager-Qt-Cpp-desktop-application
+```
+- Qt C++ setup:
+  - open QT Creator
+  - import the project
+  - configure the project settings (e.g., MySQL driver, Qt version, etc.)
+  - build and run the project
+
+- Email sending Api setup:
   ```
+  cd Email Sending API FLASK Python
+  ```
+  - install requirements:
+  ```bash
+  pip install -r requirements.txt
+  ```
+  - run the Flask app:
+  ```bash
+  flask run
+  ```
+  - ensure the Flask app is running on the correct port (default is 5000)
+
+
 
 ## 🧰 Database Setup
 ```sql
